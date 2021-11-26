@@ -26,7 +26,7 @@ public class Theme {
         }
     }
 
-    public func setStyle(app : App, font aFont: Font?) {
+    public func setStyle(app : App = .classified, font aFont: Font?) {
         switch app {
         case .classified:
             self.light = LightAliasColorToken()

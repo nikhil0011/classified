@@ -6,11 +6,9 @@
 //
 
 import UIKit
-let LColor = LightAliasColorToken()
 class ListingStyler {
     enum TextStyle {
-        case coloumnAttributeTitle(_ text: String)
- 
+        case listingCellTitle(_ text: String)
     }
 
     struct TextAttributes {
