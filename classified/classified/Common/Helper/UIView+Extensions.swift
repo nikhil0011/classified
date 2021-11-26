@@ -82,16 +82,16 @@ extension UIView {
     }
     func fillSuperview(padding: UIEdgeInsets = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
-        if let superviewTopAnchor = superview?.topAnchor {
+        if let superviewTopAnchor = superview?.safeTopAnchor {
             topAnchor.constraint(equalTo: superviewTopAnchor, constant: padding.top).isActive = true
         }
-        if let superviewBottomAnchor = superview?.bottomAnchor {
+        if let superviewBottomAnchor = superview?.safeBottomAnchor {
             bottomAnchor.constraint(equalTo: superviewBottomAnchor, constant: -padding.bottom).isActive = true
         }
-        if let superviewLeadingAnchor = superview?.leadingAnchor {
+        if let superviewLeadingAnchor = superview?.safeLeftAnchor {
             leadingAnchor.constraint(equalTo: superviewLeadingAnchor, constant: padding.left).isActive = true
         }
-        if let superviewTrailingAnchor = superview?.trailingAnchor {
+        if let superviewTrailingAnchor = superview?.safeRightAnchor {
             trailingAnchor.constraint(equalTo: superviewTrailingAnchor, constant: -padding.right).isActive = true
         }
     }
@@ -139,4 +139,34 @@ extension UIStackView {
         layoutMargins.right = right
         return self
     }
+}
+extension UIView {
+
+  var safeTopAnchor: NSLayoutYAxisAnchor {
+    if #available(iOS 11.0, *) {
+      return safeAreaLayoutGuide.topAnchor
+    }
+    return topAnchor
+  }
+
+  var safeLeftAnchor: NSLayoutXAxisAnchor {
+    if #available(iOS 11.0, *){
+      return safeAreaLayoutGuide.leadingAnchor
+    }
+    return leadingAnchor
+  }
+
+  var safeRightAnchor: NSLayoutXAxisAnchor {
+    if #available(iOS 11.0, *){
+      return safeAreaLayoutGuide.trailingAnchor
+    }
+    return trailingAnchor
+  }
+
+  var safeBottomAnchor: NSLayoutYAxisAnchor {
+    if #available(iOS 11.0, *) {
+      return safeAreaLayoutGuide.bottomAnchor
+    }
+    return bottomAnchor
+  }
 }

@@ -17,12 +17,17 @@ class ListingViewController: UIViewController {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.backgroundColor = LColor.surface
     }
-    override func loadView() {
-        view = listingView
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(listingView)
+        listingView.fillSuperview()
         setupDataSource()
+    }
+    fileprivate func navigateToDetailPage(_ indexPath: IndexPath) {
+        if let itemViewModel = self.dataSource?.item(at: indexPath) {
+            let vc = ProductDetailViewController(viewModel: itemViewModel)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     func setupDataSource() {
         var itemViewModelList: [ItemListingViewModel] = [ItemListingViewModel]()
@@ -32,7 +37,7 @@ class ListingViewController: UIViewController {
         }
         dataSource = ListingDataSource(collectionView: listingView.collectionView, array: itemViewModelList)
         dataSource?.collectionItemSelectionHandler = { [weak self] (indexPath) in
-            //
+            self?.navigateToDetailPage(indexPath)
         }
         self.listingView.collectionView.reloadData()
     }

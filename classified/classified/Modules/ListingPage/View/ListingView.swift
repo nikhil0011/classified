@@ -18,6 +18,8 @@ class ListingView: BaseView {
         return view
     }()
     override func setupViews() {
-        stack(collectionView)
+        backgroundColor = LColor.surface
+        self.addSubview(collectionView)
+        collectionView.fillSuperview()
     }
 }

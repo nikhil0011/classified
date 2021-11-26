@@ -10,6 +10,8 @@ class ListingStyler {
     enum TextStyle {
         case listingCellTitle(_ text: String)
         case listingCellSubTitle(_ text: String)
+        case detailTitle(_ text: String)
+        case detaillSubTitle(_ text: String)
         case header(_ text: String)
 
     }

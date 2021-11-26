@@ -22,6 +22,11 @@ private extension ListingStyler.TextStyle {
             return ListingStyler.TextAttributes(text: text, font: .titleSmall, color: LColor.primary)
         case .listingCellSubTitle(let text):
             return ListingStyler.TextAttributes(text: text, font: .bodyMedium, color: LColor.primary, .opacity92)
+        case .detailTitle(let text):
+            return ListingStyler.TextAttributes(text: text, font: .titleSmall, color: LColor.primary)
+        case .detaillSubTitle(let text):
+            return ListingStyler.TextAttributes(text: text, font: .bodyMedium, color: LColor.primary, .opacity92)
+
         case .header(let text):
             return ListingStyler.TextAttributes(text: text, font: .titleXLarge, color: LColor.primary)
             
