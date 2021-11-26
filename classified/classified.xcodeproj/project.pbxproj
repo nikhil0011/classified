@@ -26,6 +26,7 @@
 		2388E5C42750DC5200592538 /* CollectionDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5BD2750DC5200592538 /* CollectionDataProvider.swift */; };
 		2388E5C52750DC5200592538 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5BF2750DC5200592538 /* ConfigurableCell.swift */; };
 		2388E5C62750DC5200592538 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5C02750DC5200592538 /* ReusableCell.swift */; };
+		2388E5C82750DDD100592538 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5C72750DDD100592538 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		2388E5BD2750DC5200592538 /* CollectionDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataProvider.swift; sourceTree = "<group>"; };
 		2388E5BF2750DC5200592538 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		2388E5C02750DC5200592538 /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		2388E5C72750DDD100592538 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				2388E5B52750DC2700592538 /* Creatable.swift */,
+				2388E5C72750DDD100592538 /* UIView+Extensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				2388E5C12750DC5200592538 /* CollectionDataSource.swift in Sources */,
 				2388E5C52750DC5200592538 /* ConfigurableCell.swift in Sources */,
 				2388E5C42750DC5200592538 /* CollectionDataProvider.swift in Sources */,
+				2388E5C82750DDD100592538 /* UIView+Extensions.swift in Sources */,
 				2388E5672750D4E600592538 /* SceneDelegate.swift in Sources */,
 				2388E5A22750DA0C00592538 /* ListingViewController.swift in Sources */,
 				2388E5C32750DC5200592538 /* CollectionArrayDataSource.swift in Sources */,
