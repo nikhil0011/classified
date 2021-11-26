@@ -1,1 +1,1 @@
-# classified
+# classified demo app
