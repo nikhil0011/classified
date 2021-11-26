@@ -27,6 +27,18 @@
 		2388E5C52750DC5200592538 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5BF2750DC5200592538 /* ConfigurableCell.swift */; };
 		2388E5C62750DC5200592538 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5C02750DC5200592538 /* ReusableCell.swift */; };
 		2388E5C82750DDD100592538 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5C72750DDD100592538 /* UIView+Extensions.swift */; };
+		2388E5CB2750E21400592538 /* ListingStyler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5CA2750E21400592538 /* ListingStyler.swift */; };
+		2388E5CD2750E22E00592538 /* ListingStyler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5CC2750E22E00592538 /* ListingStyler+Extension.swift */; };
+		2388E5D02750E34A00592538 /* Opacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5CF2750E34A00592538 /* Opacity.swift */; };
+		2388E5D22750E35C00592538 /* LetterSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5D12750E35C00592538 /* LetterSpacing.swift */; };
+		2388E5D42750E36C00592538 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5D32750E36C00592538 /* Color.swift */; };
+		2388E5D62750E38000592538 /* LightAliasColorToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5D52750E38000592538 /* LightAliasColorToken.swift */; };
+		2388E5D82750E3E400592538 /* GlobalColorToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5D72750E3E400592538 /* GlobalColorToken.swift */; };
+		2388E5DA2750E46500592538 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5D92750E46500592538 /* Typography.swift */; };
+		2388E5DC2750E64C00592538 /* AliasFontToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5DB2750E64C00592538 /* AliasFontToken.swift */; };
+		2388E5DE2750E67200592538 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5DD2750E67200592538 /* FontStyle.swift */; };
+		2388E5E02750E69900592538 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5DF2750E69900592538 /* Theme.swift */; };
+		2388E5E22750EF4900592538 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5E12750EF4900592538 /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +85,18 @@
 		2388E5BF2750DC5200592538 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		2388E5C02750DC5200592538 /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		2388E5C72750DDD100592538 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		2388E5CA2750E21400592538 /* ListingStyler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingStyler.swift; sourceTree = "<group>"; };
+		2388E5CC2750E22E00592538 /* ListingStyler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListingStyler+Extension.swift"; sourceTree = "<group>"; };
+		2388E5CF2750E34A00592538 /* Opacity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opacity.swift; sourceTree = "<group>"; };
+		2388E5D12750E35C00592538 /* LetterSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterSpacing.swift; sourceTree = "<group>"; };
+		2388E5D32750E36C00592538 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		2388E5D52750E38000592538 /* LightAliasColorToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightAliasColorToken.swift; sourceTree = "<group>"; };
+		2388E5D72750E3E400592538 /* GlobalColorToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColorToken.swift; sourceTree = "<group>"; };
+		2388E5D92750E46500592538 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		2388E5DB2750E64C00592538 /* AliasFontToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasFontToken.swift; sourceTree = "<group>"; };
+		2388E5DD2750E67200592538 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		2388E5DF2750E69900592538 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		2388E5E12750EF4900592538 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +183,7 @@
 		2388E5962750D92600592538 /* ListingPage */ = {
 			isa = PBXGroup;
 			children = (
+				2388E5C92750E1F100592538 /* Styler */,
 				2388E5A02750D9C000592538 /* Controller */,
 				2388E59F2750D9B400592538 /* DataSource */,
 				2388E59E2750D9AD00592538 /* ViewModel */,
@@ -238,6 +263,7 @@
 		2388E5A32750DA5300592538 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2388E5CE2750E32700592538 /* CoreDesign */,
 				2388E5B72750DC5200592538 /* CollectionViewGenericDataSource */,
 				2388E5B42750DC0E00592538 /* Helper */,
 				2388E5A42750DA5A00592538 /* BaseView */,
@@ -298,6 +324,32 @@
 				2388E5C02750DC5200592538 /* ReusableCell.swift */,
 			);
 			path = CellAbstractions;
+			sourceTree = "<group>";
+		};
+		2388E5C92750E1F100592538 /* Styler */ = {
+			isa = PBXGroup;
+			children = (
+				2388E5CA2750E21400592538 /* ListingStyler.swift */,
+				2388E5CC2750E22E00592538 /* ListingStyler+Extension.swift */,
+			);
+			path = Styler;
+			sourceTree = "<group>";
+		};
+		2388E5CE2750E32700592538 /* CoreDesign */ = {
+			isa = PBXGroup;
+			children = (
+				2388E5CF2750E34A00592538 /* Opacity.swift */,
+				2388E5D12750E35C00592538 /* LetterSpacing.swift */,
+				2388E5D32750E36C00592538 /* Color.swift */,
+				2388E5D52750E38000592538 /* LightAliasColorToken.swift */,
+				2388E5D72750E3E400592538 /* GlobalColorToken.swift */,
+				2388E5D92750E46500592538 /* Typography.swift */,
+				2388E5DB2750E64C00592538 /* AliasFontToken.swift */,
+				2388E5DD2750E67200592538 /* FontStyle.swift */,
+				2388E5DF2750E69900592538 /* Theme.swift */,
+				2388E5E12750EF4900592538 /* Font.swift */,
+			);
+			path = CoreDesign;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,19 +483,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2388E5DC2750E64C00592538 /* AliasFontToken.swift in Sources */,
 				2388E5692750D4E600592538 /* ViewController.swift in Sources */,
+				2388E5DE2750E67200592538 /* FontStyle.swift in Sources */,
 				2388E5C22750DC5200592538 /* ArrayDataProvider.swift in Sources */,
 				2388E5652750D4E600592538 /* AppDelegate.swift in Sources */,
 				2388E5B62750DC2700592538 /* Creatable.swift in Sources */,
 				2388E5A62750DA8500592538 /* BaseView.swift in Sources */,
 				2388E5C12750DC5200592538 /* CollectionDataSource.swift in Sources */,
+				2388E5CB2750E21400592538 /* ListingStyler.swift in Sources */,
 				2388E5C52750DC5200592538 /* ConfigurableCell.swift in Sources */,
 				2388E5C42750DC5200592538 /* CollectionDataProvider.swift in Sources */,
+				2388E5D82750E3E400592538 /* GlobalColorToken.swift in Sources */,
+				2388E5E02750E69900592538 /* Theme.swift in Sources */,
 				2388E5C82750DDD100592538 /* UIView+Extensions.swift in Sources */,
 				2388E5672750D4E600592538 /* SceneDelegate.swift in Sources */,
+				2388E5D62750E38000592538 /* LightAliasColorToken.swift in Sources */,
+				2388E5D42750E36C00592538 /* Color.swift in Sources */,
+				2388E5D02750E34A00592538 /* Opacity.swift in Sources */,
 				2388E5A22750DA0C00592538 /* ListingViewController.swift in Sources */,
+				2388E5D22750E35C00592538 /* LetterSpacing.swift in Sources */,
+				2388E5E22750EF4900592538 /* Font.swift in Sources */,
 				2388E5C32750DC5200592538 /* CollectionArrayDataSource.swift in Sources */,
+				2388E5CD2750E22E00592538 /* ListingStyler+Extension.swift in Sources */,
 				2388E5B12750DADB00592538 /* BaseCollectionViewCell.swift in Sources */,
+				2388E5DA2750E46500592538 /* Typography.swift in Sources */,
 				2388E5C62750DC5200592538 /* ReusableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
