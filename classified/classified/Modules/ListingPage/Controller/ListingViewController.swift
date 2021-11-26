@@ -19,14 +19,33 @@ class ListingViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Public Classified"
         self.view.addSubview(listingView)
         listingView.fillSuperview()
-        setupDataSource()
+        fetchAPIData()
+//        setupDataSource()
     }
     fileprivate func navigateToDetailPage(_ indexPath: IndexPath) {
         if let itemViewModel = self.dataSource?.item(at: indexPath) {
             let vc = ProductDetailViewController(viewModel: itemViewModel)
             self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    func fetchAPIData() {
+        ActivityIndicator.shared.showProgressView(self.view)
+        viewModel.loadData()
+        observeBindable()
+    }
+    func observeBindable() {
+        viewModel.bindableListingData.bind { [weak self] data, error in
+            ActivityIndicator.shared.hideProgressView()
+            guard let weakSelf = self else { return }
+            if error != nil {
+                Logger.log(msg: "Api Failed \(String(describing: error))")
+            }
+            guard let result = data else { return }
+            weakSelf.viewModel = ListingViewModel(products: result.results)
+            weakSelf.setupDataSource()
         }
     }
     func setupDataSource() {

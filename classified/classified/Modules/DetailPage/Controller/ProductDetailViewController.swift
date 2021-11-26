@@ -22,10 +22,10 @@ class ProductDetailViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = viewModel.itemName ?? "Product Detail"
         self.view.addSubview(detailView)
         detailView.fillSuperview()
         setup(viewModel: viewModel)
-        // Do any additional setup after loading the view.
     }
     func setup(viewModel: ItemListingViewModel?) {
         guard let model = viewModel, let item = model.product else {
@@ -34,7 +34,7 @@ class ProductDetailViewController: UIViewController {
         if let url = item.imageUrls.first {
             detailView.itemImageView.downloaded(from: url)
         }
-        styler.apply(textStyle: .detailTitle(item.name), to: detailView.titleLabel)
+        styler.apply(textStyle: .detailTitle(model.itemName ?? ""), to: detailView.titleLabel)
         styler.apply(textStyle: .detaillSubTitle(item.price), to: detailView.subTitleLabel)
     }
 }

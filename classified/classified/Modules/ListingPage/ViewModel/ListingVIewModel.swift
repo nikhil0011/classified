@@ -8,9 +8,11 @@
 import UIKit
 
 struct ListingViewModel {
-    var products: [Product]? {
-        fetchData()?.results
-    }
+    var bindableListingData = DualBindable<ProductListingModel, GenericResponse>()
+//    var products: [Product]? {
+//        fetchData()?.results
+//    }
+    var products: [Product]?
     func fetchData() -> ProductListingModel? {
         loadJson(filename: "dubizzle")
     }
@@ -26,6 +28,16 @@ struct ListingViewModel {
             }
         }
         return nil
+    }
+    func loadData() {
+        Network.listing(completion: { (results) in
+            switch results {
+            case .success(let data):
+                self.bindableListingData.value = data
+            case .failure(let error):
+                self.bindableListingData.anotherValue = error
+            }
+        })
     }
 }
 struct ItemListingViewModel {
@@ -45,5 +57,8 @@ struct ItemListingViewModel {
     }
     var sectionInset: UIEdgeInsets {
         .init(top: 0, left: 20, bottom: 0, right: 20)
+    }
+    var itemName: String? {
+        product?.name.capitalized
     }
 }
