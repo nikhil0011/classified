@@ -15,6 +15,10 @@
 		2388E5712750D4E900592538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2388E56F2750D4E900592538 /* LaunchScreen.storyboard */; };
 		2388E57C2750D4EA00592538 /* classifiedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E57B2750D4EA00592538 /* classifiedTests.swift */; };
 		2388E5872750D4EA00592538 /* classifiedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5862750D4EA00592538 /* classifiedUITests.swift */; };
+		2388E5952750D91900592538 /* dubizzle.json in Resources */ = {isa = PBXBuildFile; fileRef = 2388E5942750D91900592538 /* dubizzle.json */; };
+		2388E5A22750DA0C00592538 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5A12750DA0C00592538 /* ListingViewController.swift */; };
+		2388E5A62750DA8500592538 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5A52750DA8500592538 /* BaseView.swift */; };
+		2388E5B12750DADB00592538 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5AB2750DADB00592538 /* BaseCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		2388E5822750D4EA00592538 /* classifiedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = classifiedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2388E5862750D4EA00592538 /* classifiedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classifiedUITests.swift; sourceTree = "<group>"; };
 		2388E5882750D4EA00592538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2388E5942750D91900592538 /* dubizzle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dubizzle.json; sourceTree = "<group>"; };
+		2388E5A12750DA0C00592538 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		2388E5A52750DA8500592538 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		2388E5AB2750DADB00592538 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 		2388E5632750D4E600592538 /* classified */ = {
 			isa = PBXGroup;
 			children = (
+				2388E5A32750DA5300592538 /* Common */,
+				2388E5992750D93E00592538 /* Service */,
+				2388E5972750D93100592538 /* Modules */,
+				2388E5942750D91900592538 /* dubizzle.json */,
 				2388E5642750D4E600592538 /* AppDelegate.swift */,
 				2388E5662750D4E600592538 /* SceneDelegate.swift */,
 				2388E5682750D4E600592538 /* ViewController.swift */,
@@ -126,6 +138,102 @@
 				2388E5882750D4EA00592538 /* Info.plist */,
 			);
 			path = classifiedUITests;
+			sourceTree = "<group>";
+		};
+		2388E5962750D92600592538 /* ListingPage */ = {
+			isa = PBXGroup;
+			children = (
+				2388E5A02750D9C000592538 /* Controller */,
+				2388E59F2750D9B400592538 /* DataSource */,
+				2388E59E2750D9AD00592538 /* ViewModel */,
+				2388E59D2750D9A800592538 /* View */,
+			);
+			path = ListingPage;
+			sourceTree = "<group>";
+		};
+		2388E5972750D93100592538 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2388E59A2750D97200592538 /* DetailPage */,
+				2388E5962750D92600592538 /* ListingPage */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		2388E5992750D93E00592538 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2388E59A2750D97200592538 /* DetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				2388E59C2750D99C00592538 /* ViewModel */,
+				2388E59B2750D99500592538 /* View */,
+			);
+			path = DetailPage;
+			sourceTree = "<group>";
+		};
+		2388E59B2750D99500592538 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2388E59C2750D99C00592538 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2388E59D2750D9A800592538 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2388E59E2750D9AD00592538 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2388E59F2750D9B400592538 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		2388E5A02750D9C000592538 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2388E5A12750DA0C00592538 /* ListingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2388E5A32750DA5300592538 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2388E5A42750DA5A00592538 /* BaseView */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2388E5A42750DA5A00592538 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				2388E5AB2750DADB00592538 /* BaseCollectionViewCell.swift */,
+				2388E5A52750DA8500592538 /* BaseView.swift */,
+			);
+			path = BaseView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +341,7 @@
 			files = (
 				2388E5712750D4E900592538 /* LaunchScreen.storyboard in Resources */,
 				2388E56E2750D4E900592538 /* Assets.xcassets in Resources */,
+				2388E5952750D91900592538 /* dubizzle.json in Resources */,
 				2388E56C2750D4E600592538 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +369,10 @@
 			files = (
 				2388E5692750D4E600592538 /* ViewController.swift in Sources */,
 				2388E5652750D4E600592538 /* AppDelegate.swift in Sources */,
+				2388E5A62750DA8500592538 /* BaseView.swift in Sources */,
 				2388E5672750D4E600592538 /* SceneDelegate.swift in Sources */,
+				2388E5A22750DA0C00592538 /* ListingViewController.swift in Sources */,
+				2388E5B12750DADB00592538 /* BaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
