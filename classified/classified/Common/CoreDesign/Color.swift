@@ -16,3 +16,8 @@ public protocol Color {
     var negative : UIColor {get}
     var warning : UIColor {get}
 }
+extension UIColor {
+    func alpha(with opacity: Opacity) -> UIColor {
+        self.withAlphaComponent(opacity.rawValue)
+    }
+}

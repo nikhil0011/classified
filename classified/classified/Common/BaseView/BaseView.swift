@@ -9,7 +9,7 @@ import UIKit
 protocol BaseViewProtocol: AnyObject {
     func setupViews()
 }
-class NFBaseView: UIView, BaseViewProtocol {
+class BaseView: UIView, BaseViewProtocol {
     override func layoutSubviews() {
         super.layoutSubviews()
     }

@@ -39,6 +39,15 @@
 		2388E5DE2750E67200592538 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5DD2750E67200592538 /* FontStyle.swift */; };
 		2388E5E02750E69900592538 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5DF2750E69900592538 /* Theme.swift */; };
 		2388E5E22750EF4900592538 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5E12750EF4900592538 /* Font.swift */; };
+		2388E5E52751209400592538 /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5E42751209300592538 /* ListingView.swift */; };
+		2388E5E8275133D700592538 /* ProductListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5E7275133D600592538 /* ProductListingModel.swift */; };
+		2388E5EA275134D000592538 /* ListingVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5E9275134D000592538 /* ListingVIewModel.swift */; };
+		2388E5EC2751354B00592538 /* ListingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5EB2751354B00592538 /* ListingDataSource.swift */; };
+		2388E5F02751364100592538 /* ListingProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5EF2751364100592538 /* ListingProductsCollectionViewCell.swift */; };
+		2388E5F227513A7E00592538 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5F127513A7E00592538 /* ReusableViewProtocol.swift */; };
+		2388E5F427513F6500592538 /* ListingProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5F327513F6500592538 /* ListingProductCellView.swift */; };
+		2388E5F62751491500592538 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5F52751491500592538 /* UIImageView+Extension.swift */; };
+		2388E5FA275149EC00592538 /* TitleOnlyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E5F9275149EC00592538 /* TitleOnlyHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +106,15 @@
 		2388E5DD2750E67200592538 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		2388E5DF2750E69900592538 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		2388E5E12750EF4900592538 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		2388E5E42751209300592538 /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
+		2388E5E7275133D600592538 /* ProductListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingModel.swift; sourceTree = "<group>"; };
+		2388E5E9275134D000592538 /* ListingVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingVIewModel.swift; sourceTree = "<group>"; };
+		2388E5EB2751354B00592538 /* ListingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDataSource.swift; sourceTree = "<group>"; };
+		2388E5EF2751364100592538 /* ListingProductsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		2388E5F127513A7E00592538 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		2388E5F327513F6500592538 /* ListingProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingProductCellView.swift; sourceTree = "<group>"; };
+		2388E5F52751491500592538 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		2388E5F9275149EC00592538 /* TitleOnlyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleOnlyHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +201,7 @@
 		2388E5962750D92600592538 /* ListingPage */ = {
 			isa = PBXGroup;
 			children = (
+				2388E5E6275133A200592538 /* Model */,
 				2388E5C92750E1F100592538 /* Styler */,
 				2388E5A02750D9C000592538 /* Controller */,
 				2388E59F2750D9B400592538 /* DataSource */,
@@ -234,6 +253,9 @@
 		2388E59D2750D9A800592538 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2388E5F9275149EC00592538 /* TitleOnlyHeader.swift */,
+				2388E5E42751209300592538 /* ListingView.swift */,
+				2388E5F327513F6500592538 /* ListingProductCellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -241,6 +263,7 @@
 		2388E59E2750D9AD00592538 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2388E5E9275134D000592538 /* ListingVIewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -248,6 +271,7 @@
 		2388E59F2750D9B400592538 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				2388E5EB2751354B00592538 /* ListingDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -255,6 +279,7 @@
 		2388E5A02750D9C000592538 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2388E5EF2751364100592538 /* ListingProductsCollectionViewCell.swift */,
 				2388E5A12750DA0C00592538 /* ListingViewController.swift */,
 			);
 			path = Controller;
@@ -285,6 +310,8 @@
 			children = (
 				2388E5B52750DC2700592538 /* Creatable.swift */,
 				2388E5C72750DDD100592538 /* UIView+Extensions.swift */,
+				2388E5F127513A7E00592538 /* ReusableViewProtocol.swift */,
+				2388E5F52751491500592538 /* UIImageView+Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -350,6 +377,14 @@
 				2388E5E12750EF4900592538 /* Font.swift */,
 			);
 			path = CoreDesign;
+			sourceTree = "<group>";
+		};
+		2388E5E6275133A200592538 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2388E5E7275133D600592538 /* ProductListingModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +519,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2388E5DC2750E64C00592538 /* AliasFontToken.swift in Sources */,
+				2388E5FA275149EC00592538 /* TitleOnlyHeader.swift in Sources */,
+				2388E5F427513F6500592538 /* ListingProductCellView.swift in Sources */,
 				2388E5692750D4E600592538 /* ViewController.swift in Sources */,
 				2388E5DE2750E67200592538 /* FontStyle.swift in Sources */,
 				2388E5C22750DC5200592538 /* ArrayDataProvider.swift in Sources */,
@@ -496,18 +533,25 @@
 				2388E5C42750DC5200592538 /* CollectionDataProvider.swift in Sources */,
 				2388E5D82750E3E400592538 /* GlobalColorToken.swift in Sources */,
 				2388E5E02750E69900592538 /* Theme.swift in Sources */,
+				2388E5EC2751354B00592538 /* ListingDataSource.swift in Sources */,
 				2388E5C82750DDD100592538 /* UIView+Extensions.swift in Sources */,
+				2388E5E52751209400592538 /* ListingView.swift in Sources */,
 				2388E5672750D4E600592538 /* SceneDelegate.swift in Sources */,
 				2388E5D62750E38000592538 /* LightAliasColorToken.swift in Sources */,
 				2388E5D42750E36C00592538 /* Color.swift in Sources */,
 				2388E5D02750E34A00592538 /* Opacity.swift in Sources */,
 				2388E5A22750DA0C00592538 /* ListingViewController.swift in Sources */,
+				2388E5F227513A7E00592538 /* ReusableViewProtocol.swift in Sources */,
 				2388E5D22750E35C00592538 /* LetterSpacing.swift in Sources */,
+				2388E5EA275134D000592538 /* ListingVIewModel.swift in Sources */,
 				2388E5E22750EF4900592538 /* Font.swift in Sources */,
 				2388E5C32750DC5200592538 /* CollectionArrayDataSource.swift in Sources */,
+				2388E5F02751364100592538 /* ListingProductsCollectionViewCell.swift in Sources */,
 				2388E5CD2750E22E00592538 /* ListingStyler+Extension.swift in Sources */,
+				2388E5E8275133D700592538 /* ProductListingModel.swift in Sources */,
 				2388E5B12750DADB00592538 /* BaseCollectionViewCell.swift in Sources */,
 				2388E5DA2750E46500592538 /* Typography.swift in Sources */,
+				2388E5F62751491500592538 /* UIImageView+Extension.swift in Sources */,
 				2388E5C62750DC5200592538 /* ReusableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

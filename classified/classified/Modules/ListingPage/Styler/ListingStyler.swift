@@ -9,6 +9,9 @@ import UIKit
 class ListingStyler {
     enum TextStyle {
         case listingCellTitle(_ text: String)
+        case listingCellSubTitle(_ text: String)
+        case header(_ text: String)
+
     }
 
     struct TextAttributes {
@@ -67,6 +70,6 @@ class ListingStyler {
 }
 extension UIImage {
     struct App {
-        static let image = "image"
+        static let placeholderImage = "placeholder"
     }
 }

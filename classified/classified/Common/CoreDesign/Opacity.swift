@@ -16,5 +16,6 @@ public enum Opacity: CGFloat {
     case opacity32 = 0.32
     case opacity24 = 0.24
     case opacity16 = 0.16
+    case opacity12 = 0.12
     case opacity08 = 0.08
 }

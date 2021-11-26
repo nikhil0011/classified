@@ -18,8 +18,13 @@ extension ListingStyler {
 private extension ListingStyler.TextStyle {
     var moduleAttributes: ListingStyler.TextAttributes {
         switch self {
-        case .coloumnAttributeTitle(let text):
-            return ListingStyler.TextAttributes(text: text, font: .buttonSmall, color: LColor.primary, .opacity92)
+        case .listingCellTitle(let text):
+            return ListingStyler.TextAttributes(text: text, font: .titleSmall, color: LColor.primary)
+        case .listingCellSubTitle(let text):
+            return ListingStyler.TextAttributes(text: text, font: .bodyMedium, color: LColor.primary, .opacity92)
+        case .header(let text):
+            return ListingStyler.TextAttributes(text: text, font: .titleXLarge, color: LColor.primary)
+            
         }
     }
 }
