@@ -63,6 +63,7 @@
 		2388E61E27516C6A00592538 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E61D27516C6A00592538 /* ActivityIndicator.swift */; };
 		2388E62227517D4900592538 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E62127517D4900592538 /* ImageCache.swift */; };
 		2388E62427517D7000592538 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E62327517D7000592538 /* ImageLoader.swift */; };
+		23A4C9E8275247B300AA2863 /* ItemListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4C9E7275247B300AA2863 /* ItemListingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		2388E61D27516C6A00592538 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		2388E62127517D4900592538 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		2388E62327517D7000592538 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		23A4C9E7275247B300AA2863 /* ItemListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				2388E5E9275134D000592538 /* ListingVIewModel.swift */,
+				23A4C9E7275247B300AA2863 /* ItemListingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				2388E5EC2751354B00592538 /* ListingDataSource.swift in Sources */,
 				2388E5C82750DDD100592538 /* UIView+Extensions.swift in Sources */,
 				2388E61E27516C6A00592538 /* ActivityIndicator.swift in Sources */,
+				23A4C9E8275247B300AA2863 /* ItemListingViewModel.swift in Sources */,
 				2388E5E52751209400592538 /* ListingView.swift in Sources */,
 				2388E5672750D4E600592538 /* SceneDelegate.swift in Sources */,
 				2388E5D62750E38000592538 /* LightAliasColorToken.swift in Sources */,

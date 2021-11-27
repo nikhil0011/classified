@@ -40,25 +40,3 @@ struct ListingViewModel {
         })
     }
 }
-struct ItemListingViewModel {
-    let product: Product?
-    var section: ListingViewController.SectionType?
-    var itemHeight: CGFloat {
-        162
-    }
-    var itemInset: UIEdgeInsets {
-        .init(top: 8, left: 8, bottom: 8, right: 8)
-    }
-    var sectionHeaderHeigt: CGFloat {
-        94
-    }
-    var interItemSpacing: CGFloat {
-        8
-    }
-    var sectionInset: UIEdgeInsets {
-        .init(top: 0, left: 20, bottom: 0, right: 20)
-    }
-    var itemName: String? {
-        product?.name.capitalized
-    }
-}
