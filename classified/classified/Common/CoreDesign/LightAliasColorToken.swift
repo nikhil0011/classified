@@ -8,23 +8,13 @@
 import UIKit
 struct LightAliasColorToken: Color {
     var primary = UIColor(hex:GlobalColorToken.pebble900)
-    var primary10 = UIColor(hex:GlobalColorToken.pebble100)
     var secondary = UIColor(hex:GlobalColorToken.salmon500)
     var surface = UIColor(hex:GlobalColorToken.snow100)
-    var info = UIColor(hex:GlobalColorToken.blue500)
-    var positive = UIColor(hex:GlobalColorToken.green500)
-    var negative = UIColor(hex:GlobalColorToken.red500)
-    var warning = UIColor(hex:GlobalColorToken.orange500)
 }
 struct DarkAliasColorToken: Color {
     var primary = UIColor(hex:GlobalColorToken.pebble900)
-    var primary10 = UIColor(hex:GlobalColorToken.pebble100)
     var secondary = UIColor(hex:GlobalColorToken.salmon500)
     var surface = UIColor(hex:GlobalColorToken.snow100)
-    var info = UIColor(hex:GlobalColorToken.blue500)
-    var positive = UIColor(hex:GlobalColorToken.green500)
-    var negative = UIColor(hex:GlobalColorToken.red500)
-    var warning = UIColor(hex:GlobalColorToken.orange500)
 }
 extension UIColor {
     convenience init(hex hexString: String) {
