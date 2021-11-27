@@ -12,6 +12,8 @@ class ListingProductsCollectionViewCell: BaseCollectionViewCell, ConfigurableCel
     lazy var cellView: ListingProductCellView = ListingProductCellView.create {
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
+    let networker = ImageLoader.shared
+    var respresntedIndentifier: String = ""
     override func prepareForReuse() {
         self.cellView.itemImageView.image = nil
     }
@@ -22,17 +24,18 @@ class ListingProductsCollectionViewCell: BaseCollectionViewCell, ConfigurableCel
         styler.apply(textStyle: .listingCellTitle(product.name.capitalized), to: cellView.titleLabel)
         styler.apply(textStyle: .listingCellSubTitle(product.price), to: cellView.subTitleLabel)
         cellView.itemImageView.image = UIImage(named: UIImage.App.placeholderImage)
-        //        cellView.itemImageView.downloaded(from: product.imageUrls.first ?? "")
-        
-        // Create URL
-        let url = URL(string: product.imageUrls.first ?? "")!
-        
-        DispatchQueue.global().async {
-            // Fetch Image Data
-            if let data = try? Data(contentsOf: url) {
-                DispatchQueue.main.async {
-                    // Create Image and Update Image View
-                    self.cellView.itemImageView.image = UIImage(data: data)
+        let id = item.product?.uid ?? ""
+        func image(data: Data?) -> UIImage? {
+            if let data = data {
+                return UIImage(data: data)
+            }
+            return UIImage(systemName: "picture")
+        }
+        networker.image(product: product) { [weak self] data, error  in
+            let img = image(data: data)
+            DispatchQueue.main.async {
+                if (self?.respresntedIndentifier == id) {
+                    self?.cellView.itemImageView.image = img
                 }
             }
         }
@@ -42,9 +45,24 @@ class ListingProductsCollectionViewCell: BaseCollectionViewCell, ConfigurableCel
     }
     
 }
-class ImageCache {
-    public static let shared = Theme()
 
-    private let cache = NSCache<NSNumber, UIImage>()
 
-}
+
+
+
+
+
+
+
+
+//        let url = URL(string: product.imageUrls.first ?? "")!
+
+//        DispatchQueue.global().asyncAfter(deadline: .now() + Double.random(in: 0...2)) {
+//            // Fetch Image Data
+//            if let data = try? Data(contentsOf: url) {
+//                DispatchQueue.main.async {
+//                    // Create Image and Update Image View
+//                    self.cellView.itemImageView.image = UIImage(data: data)
+//                }
+//            }
+//        }

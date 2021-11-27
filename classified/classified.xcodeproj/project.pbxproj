@@ -61,6 +61,8 @@
 		2388E61A275169D600592538 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E619275169D600592538 /* Logger.swift */; };
 		2388E61C27516B0F00592538 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E61B27516B0F00592538 /* Urls.swift */; };
 		2388E61E27516C6A00592538 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E61D27516C6A00592538 /* ActivityIndicator.swift */; };
+		2388E62227517D4900592538 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E62127517D4900592538 /* ImageCache.swift */; };
+		2388E62427517D7000592538 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E62327517D7000592538 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +142,8 @@
 		2388E619275169D600592538 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		2388E61B27516B0F00592538 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		2388E61D27516C6A00592538 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		2388E62127517D4900592538 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		2388E62327517D7000592538 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,6 +441,8 @@
 		2388E62027517CF900592538 /* ImageCache */ = {
 			isa = PBXGroup;
 			children = (
+				2388E62127517D4900592538 /* ImageCache.swift */,
+				2388E62327517D7000592538 /* ImageLoader.swift */,
 			);
 			path = ImageCache;
 			sourceTree = "<group>";
@@ -596,6 +602,7 @@
 				2388E6182751699A00592538 /* NetworkLogger.swift in Sources */,
 				2388E5C52750DC5200592538 /* ConfigurableCell.swift in Sources */,
 				2388E5C42750DC5200592538 /* CollectionDataProvider.swift in Sources */,
+				2388E62227517D4900592538 /* ImageCache.swift in Sources */,
 				2388E5D82750E3E400592538 /* GlobalColorToken.swift in Sources */,
 				2388E5E02750E69900592538 /* Theme.swift in Sources */,
 				2388E5EC2751354B00592538 /* ListingDataSource.swift in Sources */,
@@ -618,6 +625,7 @@
 				2388E5F02751364100592538 /* ListingProductsCollectionViewCell.swift in Sources */,
 				2388E5FF2751505400592538 /* ProductDetailViewController.swift in Sources */,
 				2388E6162751689900592538 /* GenericResponse.swift in Sources */,
+				2388E62427517D7000592538 /* ImageLoader.swift in Sources */,
 				2388E5CD2750E22E00592538 /* ListingStyler+Extension.swift in Sources */,
 				2388E60C275164CC00592538 /* ListingAPIRouter.swift in Sources */,
 				2388E5E8275133D700592538 /* ProductListingModel.swift in Sources */,

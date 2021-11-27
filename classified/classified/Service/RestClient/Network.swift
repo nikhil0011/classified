@@ -10,9 +10,9 @@ import Alamofire
 typealias HTTPResponse<T: Decodable> = (Result<T, GenericResponse>) -> Void
 class Network {
     private static func performRequest<T: Decodable>(_ router: APIConfiguration, completion: @escaping HTTPResponse<T>) {
-        router.urlRequest?.log()
+//        router.urlRequest?.log()
         NetworkClient.request(router).responseDecodable(of: T.self) { (response) in
-            response.response?.log(response: response)
+//            response.response?.log(response: response)
             switch response.result {
             case let .success(value):
                 DispatchQueue.main.async {

@@ -19,7 +19,7 @@ class ListingViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Public Classified"
+        self.title = "Classified Daily"
         self.view.addSubview(listingView)
         listingView.fillSuperview()
         fetchAPIData()

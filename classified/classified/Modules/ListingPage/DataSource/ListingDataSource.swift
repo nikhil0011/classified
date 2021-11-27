@@ -16,6 +16,8 @@ class ListingDataSource: CollectionArrayDataSource<ItemListingViewModel, Listing
         switch item.section {
         case .products:
             let cell: ListingProductsCollectionViewCell = collectionView.dequeue(for: indexPath)
+            let respresentedId = item.product?.uid
+            cell.respresntedIndentifier = respresentedId ?? ""
             cell.configure(item, at: indexPath)
             return cell
         default:

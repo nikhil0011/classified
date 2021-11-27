@@ -8,6 +8,7 @@
 import UIKit
 
 class ProductDetailViewController: UIViewController {
+    let networker = ImageLoader.shared
     let styler: ListingStyler = ListingStyler.myModule
     let viewModel: ItemListingViewModel
     lazy var detailView: ProductDetailView = ProductDetailView.create {
@@ -31,10 +32,19 @@ class ProductDetailViewController: UIViewController {
         guard let model = viewModel, let item = model.product else {
             return
         }
-        if let url = item.imageUrls.first {
-            detailView.itemImageView.downloaded(from: url)
-        }
         styler.apply(textStyle: .detailTitle(model.itemName ?? ""), to: detailView.titleLabel)
         styler.apply(textStyle: .detaillSubTitle(item.price), to: detailView.subTitleLabel)
+        func image(data: Data?) -> UIImage? {
+            if let data = data {
+                return UIImage(data: data)
+            }
+            return UIImage(systemName: "picture")
+        }
+        networker.image(product: item) { [weak self] data, error  in
+            let img = image(data: data)
+            DispatchQueue.main.async {
+                self?.detailView.itemImageView.image = img
+            }
+        }
     }
 }
