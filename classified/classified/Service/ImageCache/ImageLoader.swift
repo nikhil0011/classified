@@ -6,13 +6,11 @@
 //
 import Foundation
 import UIKit
-
 enum NetworkManagerError: Error {
     case badResponse(URLResponse?)
     case badData
     case badLocalUrl
 }
-
 public final class ImageLoader {
     private let cache: ImageCacheType
     static var shared = ImageLoader()
@@ -24,7 +22,7 @@ public final class ImageLoader {
         session = URLSession(configuration: config)
     }
     private func download(imageURL: URL, completion: @escaping (Data?, Error?) -> (Void)) {
-        if let imageData = cache.image(for: imageURL) {
+        if let imageData = cache[imageURL] {
             print("Image Data from cache manger \(imageData)")
             completion(imageData as Data, nil)
             return

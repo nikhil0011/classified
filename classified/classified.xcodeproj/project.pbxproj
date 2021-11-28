@@ -64,6 +64,7 @@
 		2388E62227517D4900592538 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E62127517D4900592538 /* ImageCache.swift */; };
 		2388E62427517D7000592538 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E62327517D7000592538 /* ImageLoader.swift */; };
 		23A4C9E8275247B300AA2863 /* ItemListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4C9E7275247B300AA2863 /* ItemListingViewModel.swift */; };
+		23A4C9EA2753A5BE00AA2863 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4C9E92753A5BE00AA2863 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		2388E62127517D4900592538 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		2388E62327517D7000592538 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		23A4C9E7275247B300AA2863 /* ItemListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListingViewModel.swift; sourceTree = "<group>"; };
+		23A4C9E92753A5BE00AA2863 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 			children = (
 				2388E59A2750D97200592538 /* DetailPage */,
 				2388E5962750D92600592538 /* ListingPage */,
+				23A4C9E92753A5BE00AA2863 /* MainCoordinator.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				2388E5E8275133D700592538 /* ProductListingModel.swift in Sources */,
 				2388E5B12750DADB00592538 /* BaseCollectionViewCell.swift in Sources */,
 				2388E5DA2750E46500592538 /* Typography.swift in Sources */,
+				23A4C9EA2753A5BE00AA2863 /* MainCoordinator.swift in Sources */,
 				2388E5F62751491500592538 /* UIImageView+Extension.swift in Sources */,
 				2388E5C62750DC5200592538 /* ReusableCell.swift in Sources */,
 			);

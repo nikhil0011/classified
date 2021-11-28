@@ -8,6 +8,7 @@
 import UIKit
 
 class ProductDetailViewController: UIViewController {
+    weak var coordinator: MainCoordinator?
     let networker = ImageLoader.shared
     let styler: ListingStyler = ListingStyler.myModule
     let viewModel: ItemListingViewModel

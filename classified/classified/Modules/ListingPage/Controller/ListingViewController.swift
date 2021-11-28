@@ -11,6 +11,7 @@ class ListingViewController: UIViewController {
     enum SectionType {
         case products
     }
+    weak var coordinator: MainCoordinator?
     var viewModel: ListingViewModel = ListingViewModel()
     var dataSource: ListingDataSource?
     lazy var listingView: ListingView = ListingView.create {
@@ -27,8 +28,7 @@ class ListingViewController: UIViewController {
     }
     fileprivate func navigateToDetailPage(_ indexPath: IndexPath) {
         if let itemViewModel = self.dataSource?.item(at: indexPath) {
-            let vc = ProductDetailViewController(viewModel: itemViewModel)
-            self.navigationController?.pushViewController(vc, animated: true)
+            coordinator?.showDetail(viewModel: itemViewModel)
         }
     }
     func fetchAPIData() {

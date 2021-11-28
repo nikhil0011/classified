@@ -8,18 +8,20 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    
     var window: UIWindow?
-    
-    
+    var coordinator: MainCoordinator?
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let vc = ListingViewController()
-        let nav = UINavigationController()
-        nav.view.backgroundColor = LColor.surface
-        nav.viewControllers = [vc]
+        let navController = UINavigationController()
+        navController.view.backgroundColor = LColor.surface
+        // MARK: send that into our coordinator so that it can display view controllers
+        coordinator = MainCoordinator(navigationController: navController)
+        // MARK: tell the coordinator to take over control
+        coordinator?.start()
+        // MARK: create a basic UIWindow and activate it
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = nav
+        window.rootViewController = navController
         self.window = window
         window.makeKeyAndVisible()
     }
@@ -51,7 +53,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-    
-    
 }
 
