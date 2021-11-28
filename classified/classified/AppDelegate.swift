@@ -4,6 +4,10 @@
 //
 //  Created by Nikhil Nangia on 26/11/21.
 //
+// Delaget and data source test
+// Outlet test case
+// Cell Registratio type test
+
 
 import UIKit
 let LColor = Theme.shared.light

@@ -9,7 +9,15 @@ import XCTest
 @testable import classified
 
 class classifiedTests: XCTestCase {
+    var viewControllerUnderTest: ListingViewController!
     
+    override func setUp() {
+        super.setUp()
+        viewControllerUnderTest = ListingViewController()
+        self.viewControllerUnderTest.loadView()
+        self.viewControllerUnderTest.viewDidLoad()
+        viewControllerUnderTest.setupDataSource()
+    }
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -28,20 +36,26 @@ class classifiedTests: XCTestCase {
         }
         waitForExpectations(timeout: 20, handler: nil)
     }
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    //  Converted to Swift 5.5 by Swiftify v5.5.21910 - https://swiftify.com/
+    func testUICollectionViewDataSource() {
+        let viewmodel = [ItemListingViewModel(product: nil, section: .products)]
+        let dataSource = ListingDataSource(collectionView: ListingView().collectionView, array: viewmodel)
+        XCTAssertEqual(dataSource.provider.numberOfItems(in: 0), 1)
+        XCTAssertEqual(dataSource.provider.numberOfSections(), 1)
     }
-    
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testHasAView() {
+        XCTAssertNotNil(viewControllerUnderTest.listingView)
     }
-    
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testHasACollectionView() {
+        XCTAssertNotNil(viewControllerUnderTest.listingView.collectionView)
     }
-    
+    func testCollectionViewHasDelegate() {
+        XCTAssertNotNil(viewControllerUnderTest.listingView.collectionView.delegate)
+    }
+    func testCollectionViewHasDataSource() {
+        XCTAssertNotNil(viewControllerUnderTest.listingView.collectionView.dataSource)
+    }
+    func testViewControllerHasDataSource() {
+        XCTAssertNotNil(viewControllerUnderTest.dataSource)
+    }
 }

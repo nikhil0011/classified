@@ -18,14 +18,17 @@ class ListingViewController: UIViewController {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.backgroundColor = LColor.surface
     }
-    
+    func setupView() {
+        self.view.addSubview(listingView)
+        listingView.fillSuperview()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Classified Daily"
-        self.view.addSubview(listingView)
-        listingView.fillSuperview()
+        setupView()
         fetchAPIData()
-//        setupDataSource()
+        // MARK: Load Data From Local JSON
+        // setupDataSource()
     }
     fileprivate func navigateToDetailPage(_ indexPath: IndexPath) {
         if let itemViewModel = self.dataSource?.item(at: indexPath) {

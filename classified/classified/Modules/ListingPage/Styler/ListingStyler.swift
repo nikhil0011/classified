@@ -13,9 +13,8 @@ class ListingStyler {
         case detailTitle(_ text: String)
         case detaillSubTitle(_ text: String)
         case header(_ text: String)
-
     }
-
+    
     struct TextAttributes {
         let font: AliasFontToken
         let color: UIColor
@@ -33,9 +32,9 @@ class ListingStyler {
     // MARK: - General Properties
     let backgroundColor: UIColor
     let preferredStatusBarStyle: UIStatusBarStyle
-
+    
     let attributesForStyle: (_ style: TextStyle) -> TextAttributes
-
+    
     init(backgroundColor: UIColor,
          preferredStatusBarStyle: UIStatusBarStyle = .default,
          attributesForStyle: @escaping (_ style: TextStyle) -> TextAttributes)
@@ -44,23 +43,20 @@ class ListingStyler {
         self.preferredStatusBarStyle = preferredStatusBarStyle
         self.attributesForStyle = attributesForStyle
     }
-
+    
     // MARK: - Convenience Getters
     func font(for style: TextStyle) -> AliasFontToken {
         return attributesForStyle(style).font
     }
-
     func color(for style: TextStyle) -> UIColor {
         return attributesForStyle(style).color
     }
-
     func backgroundColor(for style: TextStyle) -> UIColor? {
         return attributesForStyle(style).backgroundColor
     }
     func apply(textStyle: TextStyle, to label: UILabel) {
         label.numberOfLines = 0
         let attributes = attributesForStyle(textStyle)
-//        label.backgroundColor = attributes.backgroundColor
         let attributedText = NSMutableAttributedString(attributedString: attributes.text.typographicText(color: attributes.color, font: attributes.font, opacity: attributes.opacity))
         label.attributedText = attributedText
     }

@@ -43,26 +43,4 @@ class ListingProductsCollectionViewCell: BaseCollectionViewCell, ConfigurableCel
     override func setupViews() {
         stack(cellView)
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-//        let url = URL(string: product.imageUrls.first ?? "")!
-
-//        DispatchQueue.global().asyncAfter(deadline: .now() + Double.random(in: 0...2)) {
-//            // Fetch Image Data
-//            if let data = try? Data(contentsOf: url) {
-//                DispatchQueue.main.async {
-//                    // Create Image and Update Image View
-//                    self.cellView.itemImageView.image = UIImage(data: data)
-//                }
-//            }
-//        }
