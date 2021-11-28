@@ -6,17 +6,16 @@
 //
 import Foundation
 import UIKit.UIImage
-//import Combine
 
 // Declares in-memory image cache
 public protocol ImageCacheType: AnyObject {
-    // Returns the image associated with a given url
+    // Returns the image data associated with a given url
     func image(for url: URL) -> Data?
-    // Inserts the image of the specified url in the cache
+    // Inserts the image data of the specified url in the cache
     func insertImage(_ data: Data?, for url: URL)
-    // Removes the image of the specified url in the cache
+    // Removes the image data of the specified url in the cache
     func removeImage(for url: URL)
-    // Removes all images from the cache
+    // Removes all images data from the cache
     func removeAllImages()
     // Accesses the value associated with the given key for reading and writing
     subscript(_ url: URL) -> Data? { get set }
@@ -24,7 +23,6 @@ public protocol ImageCacheType: AnyObject {
 
 public final class ImageCache: ImageCacheType {
 
-    // 1st level cache, that contains encoded images
     private lazy var imageCache: NSCache<NSString, NSData> = {
         let cache = NSCache<NSString, NSData>()
         cache.countLimit = config.countLimit
