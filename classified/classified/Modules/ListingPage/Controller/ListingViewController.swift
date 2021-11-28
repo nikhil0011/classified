@@ -18,6 +18,7 @@ class ListingViewController: UIViewController {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.backgroundColor = LColor.surface
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Classified Daily"
