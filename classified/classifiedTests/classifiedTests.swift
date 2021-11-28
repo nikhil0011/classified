@@ -8,7 +8,7 @@
 import XCTest
 @testable import classified
 
-class classifiedTests: XCTestCase {
+class ClassifiedTests: XCTestCase {
     var viewControllerUnderTest: ListingViewController!
     
     override func setUp() {
