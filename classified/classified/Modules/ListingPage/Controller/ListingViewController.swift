@@ -27,6 +27,7 @@ class ListingViewController: UIViewController {
         self.title = "Classified Daily"
         setupView()
         fetchAPIData()
+        actionOne(UIButton())
         // MARK: Load Data From Local JSON
         // setupDataSource()
     }
@@ -51,6 +52,12 @@ class ListingViewController: UIViewController {
             weakSelf.viewModel = ListingViewModel(products: result.results)
             weakSelf.setupDataSource()
         }
+    }
+     func actionOne(_ sender: Any) {
+//        DispatchQueue.main.sync { [unowned self] in
+//            print("a")
+//        }
+//        print("b")
     }
     func setupDataSource() {
         var itemViewModelList: [ItemListingViewModel] = [ItemListingViewModel]()
