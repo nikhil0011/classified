@@ -53,12 +53,6 @@ class ListingViewController: UIViewController {
             weakSelf.setupDataSource()
         }
     }
-     func actionOne(_ sender: Any) {
-//        DispatchQueue.main.sync { [unowned self] in
-//            print("a")
-//        }
-//        print("b")
-    }
     func setupDataSource() {
         var itemViewModelList: [ItemListingViewModel] = [ItemListingViewModel]()
         for item in viewModel.products ?? [] {
