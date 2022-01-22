@@ -27,7 +27,6 @@ class ListingViewController: UIViewController {
         self.title = "Classified Daily"
         setupView()
         fetchAPIData()
-        actionOne(UIButton())
         // MARK: Load Data From Local JSON
         // setupDataSource()
     }
